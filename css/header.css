@@ -91,9 +91,9 @@ nav ul li a:hover {
     }
     #main-nav {
         display: none;
-        position: absolute;
-        top: 90px;
-        left: 0;
+        position: static;        /* AGGIUNGI QUESTA RIGA */
+        top: unset;
+        left: unset;
         width: 100vw;
         background: #111;
         flex-direction: column;
@@ -138,7 +138,6 @@ nav ul li a:hover {
 
     #header_logo {
         width: 120px;
-        margin-bottom: 10px;
     }
 
     nav {
