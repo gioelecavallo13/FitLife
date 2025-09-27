@@ -13,8 +13,8 @@
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     display: flex;
     flex-direction: column;
-    min-width: 380px;      /* aumentato */
-    max-width: 600px;      /* aumentato */
+    min-width: 380px;
+    max-width: 480px;
     width: 100%;
     align-items: stretch;
 }
@@ -36,23 +36,7 @@
     letter-spacing: 0.02em;
 }
 
-.login-form input {
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: none;
-    margin-bottom: 8px;
-    background: #222;
-    color: #fff;
-    font-size: 1em;
-    outline: none;
-    transition: box-shadow 0.2s;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-
-.login-form input:focus {
-    box-shadow: 0 0 0 2px #ffcc00;
-}
-
+.login-form input,
 .login-form textarea {
     padding: 10px 12px;
     border-radius: 6px;
@@ -64,13 +48,18 @@
     outline: none;
     transition: box-shadow 0.2s;
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-    min-height: 80px;
-    max-height: 300px;
-    resize: vertical; /* permette all'utente di ridimensionare la textarea */
+    font-family: inherit;
 }
 
+.login-form input:focus,
 .login-form textarea:focus {
     box-shadow: 0 0 0 2px #ffcc00;
+}
+
+.login-form textarea {
+    min-height: 80px;
+    max-height: 300px;
+    resize: vertical;
 }
 
 .btn-login {
@@ -143,13 +132,15 @@
     padding: 80px 0 40px 0;
     min-height: 70vh;
     flex-wrap: wrap;
-    background: none; /* oppure elimina la proprietà background */
+    background: none;
 }
 
-.contatti-form-wrapper {
+.contatti-form-wrapper,
+.contatti-mappa-wrapper {
     flex: 1 1 350px;
     max-width: 480px;
     min-width: 320px;
+    margin: 0 20px;
     z-index: 2;
 }
 
@@ -159,60 +150,71 @@
     max-width: 100%;
 }
 
-.contatti-mappa-wrapper {
-    flex: 1 1 350px;
-    max-width: 480px;
-    min-width: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-}
-
 .contatti-mappa {
     width: 100%;
-    min-width: 220px;
-    max-width: 420px;
-    min-height: 67vh;
+    height: 500px; /* stessa altezza del form */
     border: 3px solid #ffcc00;
     border-radius: 14px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    margin-bottom: 10px;
     background: #fff;
 }
 
+/* MEDIA QUERIES */
+
+/* Mobile piccolo (<600px) */
 @media (max-width: 600px) {
-    .login-form {
-        min-width: 0;
-        width: 95vw;
-        padding: 24px 8vw;
+    .login-form,
+    .contatti-mappa-wrapper,
+    .contatti-form-wrapper {
+        width: calc(100% - 40px); /* margine laterale coerente */
+        max-width: 100%;
+        margin: 0 20px;
+        padding: 20px;
+    }
+
+    .contatti-flex {
+        margin: 0 20px;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
+/* Mobile medio (<700px) */
 @media (max-width: 700px) {
-    .login-form {
-        min-width: 0;
-        width: 97vw;
-        max-width: 98vw;
-        padding: 20px 4vw;
+    .login-form,
+    .contatti-mappa-wrapper,
+    .contatti-form-wrapper {
+        width: calc(100% - 40px);
+        max-width: 100%;
+        margin: 0 20px;
+        padding: 20px;
+    }
+
+    .contatti-flex {
+        margin: 0 20px;
     }
 }
 
+/* Tablet/Small Desktop (<900px) */
 @media (max-width: 900px) {
     .contatti-flex {
         flex-direction: column;
         align-items: center;
         gap: 32px;
         padding: 40px 0 20px 0;
+        margin: 0 20px;
     }
+
     .contatti-form-wrapper,
     .contatti-mappa-wrapper {
         max-width: 98vw;
         width: 100%;
+        margin: 0 0px;
     }
+
     .contatti-mappa {
+        height: 500px; /* stessa altezza del form */
         max-width: 98vw;
-        height: 220px;
     }
 }
 
