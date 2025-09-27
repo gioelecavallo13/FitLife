@@ -1,0 +1,12 @@
+/* RESET BASE */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(87, 86, 86);
+    overflow-x: hidden;
+}
