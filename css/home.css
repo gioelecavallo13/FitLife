@@ -55,3 +55,16 @@
 .btn:hover {
     background: #9c7d01;
 }
+
+/* MEDIA QUERY PER SCHERMI PICCOLI */
+@media (max-width: 900px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    .hero-text {
+        padding: 15px;
+    }
+}
