@@ -80,23 +80,21 @@
     color: #fff;
 }
 
-/* 1° SPAZIO */
+/* --- HERO (1° SPAZIO) --- */
 .section {
     position: relative;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
     background-color: grey;
+    margin: 0;
+    padding: 0;
 }
 
 #immagine-1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-#testo {
-    min-height: 200px;
+    display: block;
 }
 
 .overlay {
@@ -112,6 +110,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
+    color: #fff;
 }
 
 .hero-text h1 {
@@ -124,6 +123,7 @@
     margin-bottom: 20px;
 }
 
+/* --- CONTATTI --- */
 .contatti-flex {
     display: flex;
     justify-content: center;
@@ -152,7 +152,7 @@
 
 .contatti-mappa {
     width: 100%;
-    height: 500px; /* stessa altezza del form */
+    height: 500px;
     border: 3px solid #ffcc00;
     border-radius: 14px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
@@ -166,7 +166,7 @@
     .login-form,
     .contatti-mappa-wrapper,
     .contatti-form-wrapper {
-        width: calc(100% - 40px); /* margine laterale coerente */
+        width: calc(100% - 40px);
         max-width: 100%;
         margin: 0 20px;
         padding: 20px;
@@ -209,11 +209,11 @@
     .contatti-mappa-wrapper {
         max-width: 98vw;
         width: 100%;
-        margin: 0 0px;
+        margin: 0;
     }
 
     .contatti-mappa {
-        height: 500px; /* stessa altezza del form */
+        height: 500px;
         max-width: 98vw;
     }
 }

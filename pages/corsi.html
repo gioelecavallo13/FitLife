@@ -17,7 +17,7 @@
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
-                <li><a href="/pages/index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="/pages/chi_siamo.html">Chi Siamo?</a></li>
                 <li><a href="/pages/contatti.html">Contatti</a></li>
             </ul>
@@ -25,8 +25,8 @@
         </nav>
     </header>
 
-    <!-- 1° SPAZIO -->
-    <section class="section">
+    <!-- 1° SPAZIO (Hero) -->
+    <section id="section-hero">
         <img id="immagine-1" src="/images/corsi-img-2.jpg" alt="">
         <div class="overlay"></div>
         <div class="hero-text">
@@ -35,49 +35,43 @@
         </div>
     </section>
 
-    <!-- 2° SPAZIO-->
-    <section class="section" id="section-tabella">
+    <!-- 2° SPAZIO (Cards corsi) -->
+    <section id="section-cards">
         <div style="width:100%; text-align:center; margin-bottom: 24px;">
             <h2>I NOSTRI CORSI</h2>
         </div>
-        <table>
-            <tr>
-                <th>Corsi</th>
-                <th>Orari</th>
-                <th>Descrizioni</th>
-                <th>Costi</th>
-            </tr>
-            <tr>
-                <td>Yoga Relax</td>
-                <td>Lunedì - 18:00/19:00</td>
-                <td>Lezioni per migliorare flessibilità, respirazione e rilassamento.</td>
-                <td>€30/mese</td>
-            </tr>
-            <tr>
-                <td>Pilates Core</td>
-                <td>Martedì - 19:00/20:00</td>
-                <td>Allenamento del core e della postura, ideale per tonificare.</td>
-                <td>€35/mese</td>
-            </tr>
-            <tr>
-                <td>CrossFit Power</td>
-                <td>Mercoledì - 20:00/21:00</td>
-                <td>Allenamenti intensi a circuito per forza e resistenza.</td>
-                <td>€45/mese</td>
-            </tr>
-            <tr>
-                <td>Zumba Energy</td>
-                <td>Giovedì - 18:30/19:30</td>
-                <td>Lezioni di ballo fitness a ritmo di musica latina.</td>
-                <td>€30/mese</td>
-            </tr>
-            <tr>
-                <td>Functional Training</td>
-                <td>Venerdì - 19:30/20:30</td>
-                <td>Esercizi funzionali per migliorare forza, mobilità e resistenza.</td>
-                <td>€40/mese</td>
-            </tr>
-        </table>
+        <div class="cards-container">
+            <div class="card-corso">
+                <h3>Yoga Relax</h3>
+                <p class="orari">Lunedì - 18:00/19:00</p>
+                <p class="descrizione">Lezioni per migliorare flessibilità, respirazione e rilassamento.</p>
+                <p class="costo">€30/mese</p>
+            </div>
+            <div class="card-corso">
+                <h3>Pilates Core</h3>
+                <p class="orari">Martedì - 19:00/20:00</p>
+                <p class="descrizione">Allenamento del core e della postura, ideale per tonificare.</p>
+                <p class="costo">€35/mese</p>
+            </div>
+            <div class="card-corso">
+                <h3>CrossFit Power</h3>
+                <p class="orari">Mercoledì - 20:00/21:00</p>
+                <p class="descrizione">Allenamenti intensi a circuito per forza e resistenza.</p>
+                <p class="costo">€45/mese</p>
+            </div>
+            <div class="card-corso">
+                <h3>Zumba Energy</h3>
+                <p class="orari">Giovedì - 18:30/19:30</p>
+                <p class="descrizione">Lezioni di ballo fitness a ritmo di musica latina.</p>
+                <p class="costo">€30/mese</p>
+            </div>
+            <div class="card-corso">
+                <h3>Functional Training</h3>
+                <p class="orari">Venerdì - 19:30/20:30</p>
+                <p class="descrizione">Esercizi funzionali per migliorare forza, mobilità e resistenza.</p>
+                <p class="costo">€40/mese</p>
+            </div>
+        </div>
     </section>
 
     <!-- FOOTER -->
@@ -90,7 +84,7 @@
             <div class="footer-col">
                 <h4 class="footer-title">Link utili</h4>
                 <ul class="footer-links">
-                    <li><a href="/pages/index.html">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="/pages/corsi.html">Corsi</a></li>
                     <li><a href="/pages/chi_siamo.html">Chi Siamo?</a></li>
                     <li><a href="/pages/contatti.html">Contatti</a></li>

@@ -1,61 +1,18 @@
-/* HERO */
-.section {
+#section-hero {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background-color: grey;
-}
-
-#section-tabella {
+    min-height: 60vh;
+    height: auto; /* lascia che si riduca con il contenuto */
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;   /* Inizia dall'alto */
+    justify-content: center;
     align-items: center;
-    min-height: 60vh;              /* Altezza minima più compatta */
-    padding: 100px 0 60px 0;       /* Spazio sopra per header fisso, sotto per respiro */
-    box-sizing: border-box;
-    position: relative;
-    background: none;              /* Nessun colore di sfondo aggiuntivo */
-    gap: 24px;                     /* Spazio tra titolo e tabella */
 }
-
-#section-tabella h2 {
-    margin-bottom: 12px;
-    font-size: 2.2rem;
-    color: #ffcc00;
-    letter-spacing: 0.03em;
-    text-align: center;
-}
-
-#section-tabella table {
-    margin: 0 auto;
-    width: 80%;
-    max-width: 900px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
-}
-
-table {
-    width: 80%;                /* la tabella occupa solo l'80% della pagina */
-    max-width: 1000px;         /* opzionale: limite massimo di larghezza */
-    margin: 0;         /* elimina margini verticali */
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    background-color: #2c2c2c; /* per differenziarla dallo sfondo */
-    border-radius: 8px;        /* angoli arrotondati */
-    overflow: hidden;          /* così i bordi arrotondati funzionano anche con gli <tr> */
-}
-
 
 #immagine-1 {
     width: 100%;
-    height: 100%;
+    height: auto; /* mantiene proporzioni */
     object-fit: cover;
+    display: block;
 }
 
 .overlay {
@@ -65,22 +22,24 @@ table {
     background: rgba(0,0,0,0.6);
 }
 
+
 .hero-text {
     position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
+    padding: 0 20px;
 }
 
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 15px;
+    color: #fff;
 }
 
 .hero-text p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: #ddd;
 }
 
 .btn {
@@ -98,77 +57,90 @@ table {
     background: #9c7d01;
 }
 
-/* TABELLA */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-th, td {
-    padding: 12px 15px;
-    border-bottom: 1px solid grey;
-}
-
-th {
-    background-color: #ffcc00;
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-tr:nth-child(even) {
-    background-color: #e36b6b;
-}
-
-/* Hover differenziato */
-tr:nth-child(even):hover {
-    background-color: #b04f4f; /* più scuro del rosso base */
-    transition: 0.3s;
-}
-
-tr:nth-child(odd):hover {
-    background-color: rgb(97, 96, 96); /* grigio chiaro, più scuro del bianco */
-    transition: 0.3s;
-}
-
-/* Migliora la gestione dello spazio per la tabella */
-#section-tabella {
+/* --- CARDS (Corsi) --- */
+#section-cards {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    min-height: 60vh;
-    padding: 100px 0 60px 0; /* aumenta il padding-bottom per lasciare spazio al footer */
-    box-sizing: border-box;
-    position: relative;
-    background: none;
+    padding: 40px 20px 40px 20px;
     gap: 24px;
 }
 
-/* Responsive: tabella scrollabile su mobile */
+#section-cards h2 {
+    font-size: 2.2rem;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.card-corso {
+    background-color: #2c2c2c;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card-corso:hover {
+    transform: translateY(-5px);
+    background-color: #3a3a3a;
+}
+
+.card-corso h3 {
+    color: #ffcc00;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.card-corso .orari {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.card-corso .descrizione {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: #ddd;
+}
+
+.card-corso .costo {
+    font-weight: bold;
+    color: #ffcc00;
+    font-size: 1.1rem;
+}
+
+/* --- Responsive --- */
 @media (max-width: 900px) {
-    #section-tabella {
-        padding: 90px 0 80px 0; /* padding-bottom maggiore per evitare sovrapposizione footer */
-        min-height: 0;
-        overflow-x: auto;
+    #section-hero {
+        min-height: auto; /* riduci un po' */
     }
-    .table-responsive {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+
+    .hero-text h1 {
+        font-size: 2rem;
     }
-    #section-tabella table,
-    table {
-        width: 600px;
-        max-width: none;
-        font-size: 14px;
+
+    .hero-text p {
+        font-size: 1rem;
     }
-    #section-tabella table {
-        margin: 0;
+
+    #section-cards {
+        padding: 40px 16px 40px 16px;
+    }
+
+    .card-corso h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-corso .descrizione {
+        font-size: 0.9rem;
     }
 }
