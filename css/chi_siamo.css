@@ -55,7 +55,7 @@
 
 /* SEZIONE VALORI */
 #valori {
-    background: #111;
+    background: #333;
     color: #fff;
     padding: 80px 20px;
     text-align: center;
@@ -85,7 +85,7 @@
 
 /* SEZIONE STAFF */
 #staff {
-    background: #222;
+    background: rgb(87, 86, 86);
     color: #fff;
     padding: 80px 20px;
     text-align: center;
