@@ -13,11 +13,11 @@
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     display: flex;
     flex-direction: column;
-    width: 100%;         /* sempre 100% del wrapper */
-    min-width: 0;        /* nessun vincolo */
-    max-width: 100%;     /* non oltre il wrapper */
+    width: 100%;
+    max-width: 100%;
     align-items: stretch;
-    height: 500px;       /* altezza fissa */
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .login-form h2 {
@@ -100,14 +100,17 @@
 
 .overlay {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.6);
 }
 
 .hero-text {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
@@ -128,27 +131,29 @@
 .contatti-flex {
     display: flex;
     justify-content: center;
-    align-items: flex-start;  /* 👈 non stirano più in altezza */
+    align-items: stretch;
     gap: 40px;
     padding: 80px 0 40px 0;
     flex-wrap: wrap;
-    background: none;
 }
 
 .contatti-form-wrapper,
 .contatti-mappa-wrapper {
-    flex: 0 0 auto;   /* 👈 larghezza si adatta ma senza crescere troppo */
-    max-width: 700px;
-    min-width: 500px;
-    margin: 0 20px;
+    flex: 1 1 100%;
+    max-width: 500px; /* massimo 500px su tablet e desktop */
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .contatti-form-wrapper .login-form,
 .contatti-mappa {
-    width: 100%;       /* sempre stesso comportamento */
-    max-width: 100%;
-    min-width: 0;
-    height: 500px;     /* 👈 fissa e coerente col form */
+    width: 100%;
+    flex: 1;
+    max-height: 80vh;
+    box-sizing: border-box;
 }
 
 .contatti-mappa {
@@ -158,45 +163,28 @@
     background: #fff;
 }
 
-/* MEDIA QUERIES */
-
-/* Mobile piccolo (<600px) */
+/* MOBILE piccolo (<600px) */
 @media (max-width: 600px) {
-    .contatti-form-wrapper,
-    .contatti-mappa-wrapper {
-        width: calc(100% - 40px);
-        max-width: 100%;
-        margin: 0 20px;
-        padding: 20px;
-    }
-
     .contatti-flex {
-        margin: 0 20px;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        gap: 20px;
+        padding: 20px 0;
+        margin: 0;
     }
 
-    .contatti-mappa {
-        height: 500px;
-    }
-}
-
-/* Mobile medio (<700px) */
-@media (max-width: 700px) {
     .contatti-form-wrapper,
     .contatti-mappa-wrapper {
-        width: calc(100% - 40px);
+        width: 100%;
         max-width: 100%;
-        margin: 0 20px;
-        padding: 20px;
+        padding: 0 10px;
+        margin: 0 auto;
     }
 
-    .contatti-flex {
-        margin: 0 20px;
-    }
-
+    .contatti-form-wrapper .login-form,
     .contatti-mappa {
-        height: 500px;
+        max-height: 70vh;
+        flex: 1;
     }
 }
 
@@ -212,15 +200,14 @@
 
     .contatti-form-wrapper,
     .contatti-mappa-wrapper {
-        width: 480px;
-        max-width: 480px;
-        min-width: 320px;
-        margin: 0 auto;
+        width: 90%;
+        max-width: 500px; /* massimo 500px su tablet */
     }
 
+    .contatti-form-wrapper .login-form,
     .contatti-mappa {
-        height: 500px;
-        width: 480px;
+        max-height: 75vh;
+        flex: 1;
     }
 }
 
