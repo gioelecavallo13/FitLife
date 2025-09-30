@@ -12,7 +12,10 @@
 <body>
     <!-- HEADER -->
     <header>
-        <img id="header_logo" src="/images/logo_white.png" alt="logo" loading="lazy">
+        <picture>
+            <source srcset="/images/logo_white.webp" type="image/webp">
+            <img id="header_logo" src="/images/logo_white.png" alt="">
+        </picture>        
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
@@ -109,7 +112,10 @@
     <footer>
         <div class="footer-container">
             <div class="footer-col" id="footer-div-img">
-                <img src="/images/logo_white.png" alt="FitLife logo" class="footer-logo" loading="lazy">
+                <picture>
+                    <source srcset="/images/logo_white.webp" type="image/webp">
+                    <img src="/images/logo_white.png" alt="FitLife logo" class="footer-logo" loading="lazy">
+                </picture>
                 <p class="footer-desc">Il tuo benessere, la nostra missione.<br>Vivi FitLife ogni giorno!</p>
             </div>
             <div class="footer-col">
