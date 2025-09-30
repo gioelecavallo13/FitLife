@@ -68,3 +68,104 @@
         padding: 15px;
     }
 }
+
+/* SEZIONE RISULTATI */
+.stats {
+    overflow: hidden;
+    background: #ffcc00;
+    padding: 15px 0;
+    white-space: nowrap;
+    position: relative;
+    font-weight: bold;
+}
+
+.scroll-wrapper {
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    left: 100%; /* parte completamente a destra */
+    transition: none;
+}
+
+.stat {
+    display: inline-block;
+    min-width: 200px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.stat span.counter {
+    display: block;
+    font-size: 2.5rem;
+    color: #222;
+}
+
+.stat p {
+    margin: 0;
+    font-size: 1rem;
+    color: #222;
+}
+
+
+/* SEZIONE MOTIVAZIONE */
+.motivation {
+    padding: 40px 20px;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-size: 2.0rem;
+    font-style: italic;
+    transition: 0.5s ease;
+}
+
+.motivation:hover{
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* SEZIONE TESTIMONIANZE */
+.testimonials {
+    padding: 60px 20px;
+    background: rgb(87, 86, 86) ;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffcc00;
+}
+
+.testimonials .testimonial {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: white;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.testimonial p:hover {
+    text-decoration: underline;
+    transition: 0.5s ease;
+}
+
+.testimonials .testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffcc00;
+    font-size: 1rem;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 900px) {
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .testimonials .testimonial {
+        margin-bottom: 40px;
+    }
+}
