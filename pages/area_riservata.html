@@ -27,8 +27,10 @@
 
     <!-- 1° SPAZIO -->
      <section class="section">
-        <img id="immagine-1" src="/images/area_riservata-img-2.jpg" alt="" loading="lazy">
-        <div class="overlay"></div>
+        <picture>
+            <source srcset="/images/area_riservata/area_riservata-img-2.webp" type="image/webp">
+            <img id="immagine-1" src="/images/area_riservata/area_riservata-img-2.jpg" alt="">
+        </picture>        <div class="overlay"></div>
         <div class="hero-text">
             <form class="login-form" action="/server/login.php" method="post">
             <h2>Accedi all'Area Riservata</h2>
