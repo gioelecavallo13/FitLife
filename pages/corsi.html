@@ -13,7 +13,10 @@
     
     <!-- HEADER -->
     <header>
-        <img id="header_logo" src="/images/logo_white.png" alt="logo" loading="lazy">
+        <picture>
+            <source srcset="/images/logo_white.webp" type="image/webp">
+            <img id="header_logo" src="/images/logo_white.png" alt="">
+        </picture>
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
@@ -27,7 +30,10 @@
 
     <!-- 1° SPAZIO (Hero) -->
     <section id="section-hero">
-        <img id="immagine-1" src="/images/corsi-img-2.jpg" alt="" loading="lazy">
+        <picture>
+            <source srcset="/images/corsi/corsi-img-2.webp" type="image/webp">
+            <img id="immagine-1" src="/images/corsi/corsi-img-2.jpg" alt="">
+        </picture>          
         <div class="overlay"></div>
         <div class="hero-text">
             <h1>Iscriviti ai nostri corsi.</h1>
@@ -77,8 +83,11 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-container">
-            <div class="footer-col">
-                <img src="/images/logo_white.png" alt="FitLife logo" class="footer-logo" loading="lazy">
+            <div class="footer-col" id="footer-div-img">
+                <picture>
+                    <source srcset="/images/logo_white.webp" type="image/webp">
+                    <img src="/images/logo_white.png" alt="FitLife logo" class="footer-logo" loading="lazy">
+                </picture>
                 <p class="footer-desc">Il tuo benessere, la nostra missione.<br>Vivi FitLife ogni giorno!</p>
             </div>
             <div class="footer-col">

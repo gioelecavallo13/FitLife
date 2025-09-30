@@ -27,12 +27,27 @@ footer {
     margin-bottom: 18px;
 }
 
+/* LOGO */
+#footer-div-img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#footer-div-img picture {
+    display: flex;
+    align-items: center;
+}
+
 .footer-logo {
-    width: 120px;
+    width: 140px;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 14px;
     filter: drop-shadow(0 2px 6px #0008);
 }
 
+/* DESCRIZIONE */
 .footer-desc {
     font-size: 1rem;
     color: #ccc;
@@ -40,6 +55,7 @@ footer {
     line-height: 1.5;
 }
 
+/* TITOLI */
 .footer-title {
     margin-bottom: 12px;
     color: #ffcc00;
@@ -47,6 +63,7 @@ footer {
     letter-spacing: 0.03em;
 }
 
+/* LINK */
 .footer-links {
     list-style: none;
     padding: 0;
@@ -76,6 +93,7 @@ footer {
     text-decoration: underline;
 }
 
+/* CONTATTI */
 .footer-contact {
     font-size: 1em;
     color: #ccc;
@@ -96,6 +114,7 @@ footer {
     text-decoration: underline;
 }
 
+/* SOCIAL */
 .footer-social {
     margin-top: 10px;
 }
@@ -114,6 +133,7 @@ footer {
     transform: scale(1.15);
 }
 
+/* BOTTOM */
 .footer-bottom {
     margin-top: 28px;
     border-top: 1px solid #333;
@@ -123,6 +143,7 @@ footer {
     letter-spacing: 0.03em;
 }
 
+/* RESPONSIVE */
 @media (max-width: 700px) {
     .footer-container {
         flex-direction: column;
@@ -130,9 +151,10 @@ footer {
         gap: 32px;
         text-align: center;
     }
-    .footer-col {
+    .footer-col, #footer-div-img {
         min-width: 0;
         text-align: center;
+        align-items: center;
     }
 }
 
@@ -144,8 +166,9 @@ footer {
         text-align: center;
         padding: 0 10px;
     }
-    .footer-col {
+    .footer-col, #footer-div-img {
         min-width: 0;
         text-align: center;
+        align-items: center;
     }
 }
