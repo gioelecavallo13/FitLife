@@ -83,6 +83,17 @@
             background-color: rgb(87, 86, 86);
         }
 
+        /*inserito per bug nell'input ora, colpa di IOS di apple*/
+        input[type="time"] {
+            -webkit-appearance: none;  /* rimuove lo stile nativo iOS */
+            -moz-appearance: none;
+            appearance: none;
+            width: 100% !important;    /* forza larghezza */
+            max-width: 100%;           /* impedisce overflow */
+            box-sizing: border-box;    /* include padding nel calcolo */
+        }
+
+
         .submit-btn {
             display: block;
             width: 100%;
