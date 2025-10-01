@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -15,37 +15,40 @@
         <picture>
             <source srcset="/images/logo_white.webp" type="image/webp">
             <img id="header_logo" src="/images/logo_white.png" alt="">
-        </picture>        
+        </picture>
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/corsi.html">Corsi</a></li>
-                <li><a href="/pages/chi_siamo.html">Chi Siamo?</a></li>
-                <li><a href="/pages/contatti.html">Contatti</a></li>
+                <li><a href="/pages/area_riservata.html">Area Riservata</a></li>
+                <li><a href="/pages/inserisci_clienti.html">Inserisci Clienti</a></li>
+                <li><a href="/pages/aggiorna_calendario.html">Aggiorna Calendario</a></li>
             </ul>
-            <a href="/pages/area_riservata.html" class="btn-area-riservata">Area Riservata</a>
+            <a href="/server/logout.php" class="btn-area-riservata">Logout</a>
         </nav>
     </header>
 
-    <!-- 1° SPAZIO -->
-     <section class="section">
-        <picture>
-            <source srcset="/images/area_riservata/area_riservata-img-2.webp" type="image/webp">
-            <img id="immagine-1" src="/images/area_riservata/area_riservata-img-2.jpg" alt="">
-        </picture>        <div class="overlay"></div>
+    <!-- HERO AREA RISERVATA -->
+    <section class="section">
+        <picture class="hero-bg">
+            <source srcset="/images/logo_white.webp" type="image/webp">
+            <img id="immagine-1" src="/images/logo_white.png" alt="">
+        </picture>
+        <div class="overlay"></div>
         <div class="hero-text">
-            <form class="login-form" action="/server/login.php" method="post">
-            <h2>Accedi all'Area Riservata</h2>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="username" placeholder="Inserisci la tua email" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Inserisci la password" required>
-            <button type="submit" class="btn-login">Accedi</button>
-        </form>
+            <h1>Area Riservata FitLife</h1>
+            <p>Gestisci clienti e corsi in totale semplicità.</p>
+            <div class="btn-group">
+                <a href="/pages/inserisci_clienti.html" class="card-btn">
+                    <h3>👤 Inserisci Clienti</h3>
+                    <p>Aggiungi nuovi clienti al gestionale in pochi click.</p>
+                </a>
+                <a href="/pages/aggiorna_calendario.html" class="card-btn">
+                    <h3>📅 Aggiorna Calendario</h3>
+                    <p>Modifica e pianifica i corsi per mantenere tutto organizzato.</p>
+                </a>
+            </div>
         </div>
     </section>
-
 
     <!-- FOOTER -->
     <footer>
@@ -60,11 +63,10 @@
             <div class="footer-col">
                 <h4 class="footer-title">Link utili</h4>
                 <ul class="footer-links">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/corsi.html">Corsi</a></li>
-                    <li><a href="/pages/chi_siamo.html">Chi Siamo?</a></li>
-                    <li><a href="/pages/contatti.html">Contatti</a></li>
                     <li><a href="/pages/area_riservata.html">Area Riservata</a></li>
+                    <li><a href="/pages/inserisci_clienti.html">Inserisci Clienti</a></li>
+                    <li><a href="/pages/aggiorna_calendario.html">Aggiorna Calendario</a></li>
+                    <li><a href="/server/logout.php">Logout</a></li>
                 </ul>
             </div>
             <div class="footer-col">
