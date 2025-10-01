@@ -17,18 +17,48 @@ counters.forEach(counter => {
 
 // ------------------- Scroll banner -------------------
 const scrollWrapper = document.getElementById('scrollBanner');
-let leftPos = window.innerWidth; // parte da destra
-const speed = 4; // px per frame, più veloce
+const stats = document.querySelectorAll('.stat');
 
-function animateScrollBanner() {
-    leftPos -= speed;
-    scrollWrapper.style.left = leftPos + 'px';
+let leftPos; 
+const speed = 4; // px per frame
+let targetPos = null;
+let animationId = null;
 
-    // quando esce completamente a sinistra, resetta a destra
-    if (leftPos + scrollWrapper.offsetWidth < 0) {
-        leftPos = window.innerWidth;
-    }
-    requestAnimationFrame(animateScrollBanner);
+// Stat da centrare (quella dei "Kg sollevati" → index 1)
+const middleStat = stats[1];
+
+function calculateTarget() {
+    const screenCenter = window.innerWidth / 2;
+    const statOffset = middleStat.offsetLeft + middleStat.offsetWidth / 2;
+    return screenCenter - statOffset;
 }
 
-requestAnimationFrame(animateScrollBanner);
+function startAnimation() {
+    cancelAnimationFrame(animationId); // blocco eventuali animazioni precedenti
+
+    leftPos = window.innerWidth; // ricomincia da destra
+    targetPos = calculateTarget();
+
+    function animateScrollBanner() {
+        leftPos -= speed;
+
+        if (leftPos <= targetPos) {
+            leftPos = targetPos;
+            scrollWrapper.style.left = leftPos + 'px';
+            return; // stop
+        }
+
+        scrollWrapper.style.left = leftPos + 'px';
+        animationId = requestAnimationFrame(animateScrollBanner);
+    }
+
+    animationId = requestAnimationFrame(animateScrollBanner);
+}
+
+// avvio iniziale
+startAnimation();
+
+// ricalcolo se cambia la dimensione della finestra
+window.addEventListener('resize', () => {
+    startAnimation();
+});

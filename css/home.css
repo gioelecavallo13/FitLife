@@ -94,7 +94,7 @@
 .stat {
     display: inline-block;
     min-width: 200px;
-    margin-right: 150px;
+    margin-right: 40px;
     text-align: center;
 }
 
@@ -108,6 +108,37 @@
     margin: 0;
     font-size: 1rem;
     color: #222;
+}
+
+/* --- RESPONSIVE STATS --- */
+@media (max-width: 900px) {
+    .stat {
+        min-width: 150px;
+        margin-right: 25px;
+    }
+
+    .stat span.counter {
+        font-size: 1.8rem;
+    }
+
+    .stat p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .stat {
+        min-width: 120px;
+        margin-right: 20px;
+    }
+
+    .stat span.counter {
+        font-size: 1.5rem;
+    }
+
+    .stat p {
+        font-size: 0.8rem;
+    }
 }
 
 /* SEZIONE TESTIMONIANZE */
