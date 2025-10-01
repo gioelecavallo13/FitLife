@@ -129,7 +129,6 @@
 @media (max-width: 600px) {
     .stat {
         min-width: 120px;
-        margin-right: 10px;
     }
 
     .stat span.counter {
