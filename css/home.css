@@ -90,7 +90,7 @@
 .stat {
     display: inline-block;
     min-width: 200px;
-    margin-right: 50px;
+    margin-right: 150px;
     text-align: center;
 }
 
@@ -106,66 +106,67 @@
     color: #222;
 }
 
-
-/* SEZIONE MOTIVAZIONE */
-.motivation {
-    padding: 40px 20px;
-    background: #222;
-    color: white;
-    text-align: center;
-    font-size: 2.0rem;
-    font-style: italic;
-    transition: 0.5s ease;
-}
-
-.motivation:hover{
-    color: #ffcc00;
-    text-decoration: underline;
-}
-
 /* SEZIONE TESTIMONIANZE */
 .testimonials {
-    padding: 60px 20px;
-    background: rgb(87, 86, 86) ;
+    padding: 40px 20px;
+    background: rgb(87, 86, 86);
     text-align: center;
 }
 
 .testimonials h2 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin:30px 0px;
     color: #ffcc00;
 }
 
-.testimonials .testimonial {
-    margin-bottom: 30px;
-    font-size: 1.1rem;
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: #2c2c2c;
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #ffcc00;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 15px;
     color: white;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
 }
 
-.testimonial p:hover {
-    text-decoration: underline;
-    transition: 0.5s ease;
-}
-
-.testimonials .testimonial span {
+.testimonial-card span {
     display: block;
-    margin-top: 10px;
     font-weight: bold;
     color: #ffcc00;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
-/* MEDIA QUERY */
+/* MOBILE */
 @media (max-width: 900px) {
-    .stats {
+    .testimonial-cards {
         flex-direction: column;
-        gap: 20px;
-    }
-    .testimonials .testimonial {
-        margin-bottom: 40px;
+        align-items: center;
     }
 }
