@@ -4,7 +4,7 @@
     width: 100%;
     box-sizing: border-box;
     /* meno spazio top e bottom per non essere troppo alto su desktop */
-    padding: 40px 16px 110px;
+    padding: 40px 16px 90px;
     background-color: #222; /* fallback se immagine non carica */
     overflow: hidden;
     /* altezza responsive: non più gigantesca su monitor grandi */
