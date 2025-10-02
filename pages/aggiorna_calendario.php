@@ -1,6 +1,11 @@
 <?php
 $allowed_roles = ['admin', 'coach'];
 require_once "../server/auth.php";
+
+// Disabilita cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 ?>
 
 <!DOCTYPE html>
@@ -135,7 +140,15 @@ require_once "../server/auth.php";
                 <li><a href="area_riservata.php">Area Riservata</a></li>
                 <li><a href="inserisci_clienti.php">Inserisci Clienti</a></li>
             </ul>
-            <a href="../server/logout.php" class="btn-area-riservata">Logout</a>
+            <!-- Bottone Logout con form POST -->
+            <form action="../server/logout.php" method="post" style="display:inline;">
+                <button type="submit" id="btn-logout" class="btn-area-riservata"
+                    style="padding:10px 20px; background:#ed4545; color:#222; border:none; border-radius:6px; cursor:pointer; color: black;"
+                    onmouseover="this.style.background='#922727';"
+                    onmouseout="this.style.background='#ed4545';">
+                    Log Out
+                </button>
+            </form>
         </nav>
     </header>
 

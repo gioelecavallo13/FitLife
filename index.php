@@ -19,11 +19,11 @@
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
-                <li><a href="pages/corsi.html">Corsi</a></li>
-                <li><a href="pages/chi_siamo.html">Chi Siamo?</a></li>
-                <li><a href="pages/contatti.html">Contatti</a></li>
+                <li><a href="pages/corsi.php">Corsi</a></li>
+                <li><a href="pages/chi_siamo.php">Chi Siamo?</a></li>
+                <li><a href="pages/contatti.php">Contatti</a></li>
             </ul>
-            <a href="pages/login.html" class="btn-area-riservata">Area Riservata</a>
+            <a href="pages/login.php" class="btn-area-riservata">Area Riservata</a>
         </nav>
     </header>
 
@@ -55,7 +55,7 @@
         <div class="hero-text">
             <h1>Benvenuto in FitLife</h1>
             <p>Trasforma il tuo corpo. Trasforma la tua vita.</p>
-            <a href="pages/corsi.html" class="btn">Scopri i nostri corsi</a>
+            <a href="pages/corsi.php" class="btn">Scopri i nostri corsi</a>
         </div>
     </section>
 
@@ -103,11 +103,11 @@
             <div class="footer-col">
                 <h4 class="footer-title">Link utili</h4>
                 <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/corsi.html">Corsi</a></li>
-                    <li><a href="pages/chi_siamo.html">Chi Siamo?</a></li>
-                    <li><a href="pages/contatti.html">Contatti</a></li>
-                    <li><a href="pages/login.html">Area Riservata</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="pages/corsi.php">Corsi</a></li>
+                    <li><a href="pages/chi_siamo.php">Chi Siamo?</a></li>
+                    <li><a href="pages/contatti.php">Contatti</a></li>
+                    <li><a href="pages/login.php">Area Riservata</a></li>
                 </ul>
             </div>
             <div class="footer-col">

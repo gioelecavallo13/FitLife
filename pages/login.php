@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    $error = $_SESSION['error'] ?? ""; // prende l'errore dalla sessione se esiste
+    unset($_SESSION['error']); // cancella l'errore dopo averlo mostrato
+?>
+
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -19,10 +26,10 @@
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="corsi.html">Corsi</a></li>
-                <li><a href="chi_siamo.html">Chi Siamo?</a></li>
-                <li><a href="contatti.html">Contatti</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="corsi.php">Corsi</a></li>
+                <li><a href="chi_siamo.php">Chi Siamo?</a></li>
+                <li><a href="contatti.php">Contatti</a></li>
             </ul>
             <a href="login.html" class="btn-area-riservata">Area Riservata</a>
         </nav>
@@ -36,12 +43,18 @@
         </picture>
         <div class="overlay"></div>
         <div class="hero-text">
-            <form class="login-form" action="../server/login.php" method="post">
+            <form class="login-form" action="../server/form_login.php" method="post">
                 <h2>Accedi all'Area Riservata</h2>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Inserisci la password" required>
+                
+                <?php 
+                    // stampa direttamente il messaggio HTML salvato in sessione
+                    echo $error;
+                ?>
+
                 <button type="submit" class="btn-login">Accedi</button>
             </form>
         </div>
@@ -60,11 +73,11 @@
             <div class="footer-col">
                 <h4 class="footer-title">Link utili</h4>
                 <ul class="footer-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="corsi.html">Corsi</a></li>
-                    <li><a href="chi_siamo.html">Chi Siamo?</a></li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                    <li><a href="login.html">Area Riservata</a></li>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="corsi.php">Corsi</a></li>
+                    <li><a href="chi_siamo.php">Chi Siamo?</a></li>
+                    <li><a href="contatti.php">Contatti</a></li>
+                    <li><a href="login.php">Area Riservata</a></li>
                 </ul>
             </div>
             <div class="footer-col">

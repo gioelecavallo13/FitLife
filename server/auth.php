@@ -9,7 +9,7 @@ session_start();
 // Se la variabile di sessione 'loggedin' non esiste significa che non è loggato
 if (!isset($_SESSION['loggedin'])) {
     // Reindirizza l'utente alla pagina di login
-    header("Location: ../pages/login.html");
+    header("Location: ../pages/login.php");
     // Termina l'esecuzione dello script per evitare che il resto della pagina venga visualizzato
     exit();
 }
