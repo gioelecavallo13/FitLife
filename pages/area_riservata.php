@@ -1,3 +1,8 @@
+<?php
+$allowed_roles = ['admin', 'coach'];
+require_once "../server/auth.php";
+?>
+
 <!DOCTYPE html> 
 <html lang="it">
 <head>
@@ -19,11 +24,13 @@
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
-                <li><a href="area_riservata.html">Area Riservata</a></li>
-                <li><a href="inserisci_clienti.html">Inserisci Clienti</a></li>
-                <li><a href="aggiorna_calendario.html">Aggiorna Calendario</a></li>
+                <li><a href="area_riservata.php">Area Riservata</a></li>
+                <li><a href="inserisci_clienti.php">Inserisci Clienti</a></li>
+                <li><a href="aggiorna_calendario.php">Aggiorna Calendario</a></li>
             </ul>
-            <a href="../server/logout.php" class="btn-area-riservata">Logout</a>
+            <form action="../server/logout.php" method="post">
+                <button type="submit" id="btn-logout" class="btn-area-riservata">Logout</button>
+            </form>
         </nav>
     </header>
 
@@ -38,11 +45,11 @@
             <h1>Area Riservata FitLife</h1>
             <p>Gestisci clienti e corsi in totale semplicità.</p>
             <div class="btn-group">
-                <a href="inserisci_clienti.html" class="card-btn">
+                <a href="inserisci_clienti.php" class="card-btn">
                     <h3>👤 Inserisci Clienti</h3>
                     <p>Aggiungi nuovi clienti al gestionale in pochi click.</p>
                 </a>
-                <a href="aggiorna_calendario.html" class="card-btn">
+                <a href="aggiorna_calendario.php" class="card-btn">
                     <h3>📅 Aggiorna Calendario</h3>
                     <p>Modifica e pianifica i corsi per mantenere tutto organizzato.</p>
                 </a>
@@ -63,9 +70,9 @@
             <div class="footer-col">
                 <h4 class="footer-title">Link utili</h4>
                 <ul class="footer-links">
-                    <li><a href="area_riservata.html">Area Riservata</a></li>
-                    <li><a href="inserisci_clienti.html">Inserisci Clienti</a></li>
-                    <li><a href="aggiorna_calendario.html">Aggiorna Calendario</a></li>
+                    <li><a href="area_riservata.php">Area Riservata</a></li>
+                    <li><a href="inserisci_clienti.php">Inserisci Clienti</a></li>
+                    <li><a href="aggiorna_calendario.php">Aggiorna Calendario</a></li>
                     <li><a href="../server/logout.php">Logout</a></li>
                 </ul>
             </div>

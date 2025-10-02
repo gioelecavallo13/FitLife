@@ -1,9 +1,14 @@
+<?php
+$allowed_roles = ['admin', 'coach'];
+require_once "../server/auth.php";
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitLife - Aggiorna Calendario</title>
+    <title>FitLife - Inserisci Cliente</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -48,7 +53,7 @@
             color: white;
             border-radius: 14px;
             padding: 40px 30px;
-            max-width: 550px;
+            max-width: 500px;
             width: 100%;
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
@@ -79,15 +84,6 @@
             border: 1px solid rgba(30, 30, 30, 0.92);
             font-size: 1rem;
             background-color: rgb(87, 86, 86);
-        }
-
-        input[type="time"] {
-            height: 45px;
-            padding: 10px 14px;
-            line-height: 1.2;
-            -webkit-appearance: none;
-            appearance: none;
-            box-sizing: border-box;
         }
 
         .submit-btn {
@@ -127,25 +123,41 @@
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
-                <li><a href="area_riservata.html">Area Riservata</a></li>
-                <li><a href="inserisci_clienti.html">Inserisci Clienti</a></li>
+                <li><a href="area_riservata.php">Area Riservata</a></li>
+                <li><a href="aggiorna_calendario.php">Aggiorna Calendario</a></li>
             </ul>
             <a href="../server/logout.php" class="btn-area-riservata">Logout</a>
         </nav>
     </header>
 
-    <!-- FORM AGGIORNA CALENDARIO -->
+    <!-- FORM INSERIMENTO CLIENTE -->
     <section class="form-section">
         <picture>
             <source srcset="../images/logo_white.webp" type="image/webp">
-            <img src="../images/logo_white.png" alt="Sfondo Aggiorna Calendario">
+            <img src="../images/logo_white.jpg" alt="Sfondo Area Riservata">
         </picture>
         <div class="overlay"></div>
         <div class="form-container">
-            <h2>Aggiorna Calendario Corsi</h2>
-            <form action="../server/aggiorna_calendario.php" method="POST">
+            <h2>Inserisci Nuovo Cliente</h2>
+            <form action="../server/inserisci_cliente.php" method="POST">
                 <div class="form-group">
-                    <label for="corso">Seleziona Corso</label>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Inserisci il nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" id="cognome" name="cognome" placeholder="Inserisci il cognome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Inserisci indirizzo email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Inserisci numero di telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="corso">Corso scelto</label>
                     <select id="corso" name="corso" required>
                         <option value="" disabled selected>Seleziona corso</option>
                         <option value="yoga">Yoga</option>
@@ -155,28 +167,7 @@
                         <option value="functional_training">Functional Training</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="giorno">Giorno</label>
-                    <select id="giorno" name="giorno" required>
-                        <option value="" disabled selected>Seleziona giorno</option>
-                        <option value="lunedi">Lunedì</option>
-                        <option value="martedi">Martedì</option>
-                        <option value="mercoledi">Mercoledì</option>
-                        <option value="giovedi">Giovedì</option>
-                        <option value="venerdi">Venerdì</option>
-                        <option value="sabato">Sabato</option>
-                        <option value="domenica">Domenica</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="orario">Orario</label>
-                    <input type="time" id="orario" name="orario" placeholder="Inserisci un orario" required>
-                </div>
-                <div class="form-group">
-                    <label for="coach">Coach</label>
-                    <input type="text" id="coach" name="coach" placeholder="Inserisci nome del coach" required>
-                </div>
-                <button type="submit" class="submit-btn">Aggiorna Calendario</button>
+                <button type="submit" class="submit-btn">Salva Cliente</button>
             </form>
         </div>
     </section>
@@ -194,9 +185,9 @@
             <div class="footer-col">
                 <h4 class="footer-title">Link utili</h4>
                 <ul class="footer-links">
-                    <li><a href="area_riservata.html">Area Riservata</a></li>
-                    <li><a href="inserisci_clienti.html">Inserisci Clienti</a></li>
-                    <li><a href="aggiorna_calendario.html">Aggiorna Calendario</a></li>
+                    <li><a href="area_riservata.php">Area Riservata</a></li>
+                    <li><a href="inserisci_clienti.php">Inserisci Clienti</a></li>
+                    <li><a href="aggiorna_calendario.php">Aggiorna Calendario</a></li>
                     <li><a href="../server/logout.php">Logout</a></li>
                 </ul>
             </div>
