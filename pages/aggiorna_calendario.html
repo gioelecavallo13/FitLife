@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitLife - Aggiorna Calendario</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <style>
         /* FORM SECTION HERO */
         .form-section {
@@ -20,7 +20,6 @@
             color: #fff;
         }
 
-        /* Sfondo tramite picture */
         .form-section picture {
             position: absolute;
             inset: 0;
@@ -35,7 +34,6 @@
             object-position: center;
         }
 
-        /* Overlay scuro */
         .form-section .overlay {
             position: absolute;
             inset: 0;
@@ -84,15 +82,13 @@
         }
 
         input[type="time"] {
-            height: 45px; /* stessa altezza degli altri */
+            height: 45px;
             padding: 10px 14px;
             line-height: 1.2;
-            -webkit-appearance: none; /* elimina stile nativo iOS */
+            -webkit-appearance: none;
             appearance: none;
             box-sizing: border-box;
         }
-
-
 
         .submit-btn {
             display: block;
@@ -125,29 +121,29 @@
     <!-- HEADER -->
     <header>
         <picture>
-            <source srcset="/images/logo_white.webp" type="image/webp">
-            <img id="header_logo" src="/images/logo_white.png" alt="">
+            <source srcset="../images/logo_white.webp" type="image/webp">
+            <img id="header_logo" src="../images/logo_white.png" alt="">
         </picture>
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
-                <li><a href="/pages/area_riservata.html">Area Riservata</a></li>
-                <li><a href="/pages/inserisci_clienti.html">Inserisci Clienti</a></li>
+                <li><a href="area_riservata.html">Area Riservata</a></li>
+                <li><a href="inserisci_clienti.html">Inserisci Clienti</a></li>
             </ul>
-            <a href="/server/logout.php" class="btn-area-riservata">Logout</a>
+            <a href="../server/logout.php" class="btn-area-riservata">Logout</a>
         </nav>
     </header>
 
     <!-- FORM AGGIORNA CALENDARIO -->
     <section class="form-section">
         <picture>
-            <source srcset="/images/logo_white.webp" type="image/webp">
-            <img src="/images/logo_white.png" alt="Sfondo Aggiorna Calendario">
+            <source srcset="../images/logo_white.webp" type="image/webp">
+            <img src="../images/logo_white.png" alt="Sfondo Aggiorna Calendario">
         </picture>
         <div class="overlay"></div>
         <div class="form-container">
             <h2>Aggiorna Calendario Corsi</h2>
-            <form action="/server/aggiorna_calendario.php" method="POST">
+            <form action="../server/aggiorna_calendario.php" method="POST">
                 <div class="form-group">
                     <label for="corso">Seleziona Corso</label>
                     <select id="corso" name="corso" required>
@@ -190,18 +186,18 @@
         <div class="footer-container">
             <div class="footer-col" id="footer-div-img">
                 <picture>
-                    <source srcset="/images/logo_white.webp" type="image/webp">
-                    <img src="/images/logo_white.png" alt="FitLife logo" class="footer-logo" loading="lazy">
+                    <source srcset="../images/logo_white.webp" type="image/webp">
+                    <img src="../images/logo_white.png" alt="FitLife logo" class="footer-logo" loading="lazy">
                 </picture>
                 <p class="footer-desc">Il tuo benessere, la nostra missione.<br>Vivi FitLife ogni giorno!</p>
             </div>
             <div class="footer-col">
                 <h4 class="footer-title">Link utili</h4>
                 <ul class="footer-links">
-                    <li><a href="/pages/area_riservata.html">Area Riservata</a></li>
-                    <li><a href="/pages/inserisci_clienti.html">Inserisci Clienti</a></li>
-                    <li><a href="/pages/aggiorna_calendario.html">Aggiorna Calendario</a></li>
-                    <li><a href="/server/logout.php">Logout</a></li>
+                    <li><a href="area_riservata.html">Area Riservata</a></li>
+                    <li><a href="inserisci_clienti.html">Inserisci Clienti</a></li>
+                    <li><a href="aggiorna_calendario.html">Aggiorna Calendario</a></li>
+                    <li><a href="../server/logout.php">Logout</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -223,6 +219,6 @@
         </div>
     </footer>
 
-    <script src="/script/index.js"></script>
+    <script src="../script/index.js"></script>
 </body>
 </html>
