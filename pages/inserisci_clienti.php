@@ -2,6 +2,9 @@
 $allowed_roles = ['admin', 'coach'];
 require_once "../server/auth.php";
 
+$esito = $_SESSION['esito'] ?? ""; // prende l'esito dalla sessione se esiste
+unset($_SESSION['esito']); // cancella l'esito dopo averlo mostrato
+
 // Disabilita cache
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
@@ -152,7 +155,7 @@ header("Pragma: no-cache");
         <div class="overlay"></div>
         <div class="form-container">
             <h2>Inserisci Nuovo Cliente</h2>
-            <form action="../server/inserisci_cliente.php" method="POST">
+            <form action="../server/ins_cliente.php" method="POST">
                 <div class="form-group">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" placeholder="Inserisci il nome" required>
@@ -180,6 +183,12 @@ header("Pragma: no-cache");
                         <option value="functional_training">Functional Training</option>
                     </select>
                 </div>
+
+                <?php 
+                    // stampa direttamente l'esito HTML salvato in sessione
+                    echo $esito;
+                ?>
+
                 <button type="submit" class="submit-btn">Salva Cliente</button>
             </form>
         </div>
