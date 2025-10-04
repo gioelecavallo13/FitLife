@@ -4,34 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitLife - Chi Siamo?</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/chi_siamo.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/chi_siamo.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <picture>
-            <source srcset="/images/logo_white.webp" type="image/webp">
-            <img id="header_logo" src="/images/logo_white.png" alt="">
+            <source srcset="../images/logo_white.webp" type="image/webp">
+            <img id="header_logo" src="../images/logo_white.png" alt="">
         </picture>        
         <button id="menu-toggle" aria-label="Apri menu">&#9776;</button>
         <nav id="main-nav">
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/corsi.html">Corsi</a></li>
-                <li><a href="/pages/contatti.html">Contatti</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="corsi.php">Corsi</a></li>
+                <li><a href="contatti.php">Contatti</a></li>
             </ul>
-            <a href="/pages/login.html" class="btn-area-riservata">Area Riservata</a>
+            <a href="login.php" class="btn-area-riservata">Area Riservata</a>
         </nav>
     </header>
 
     <!-- HERO INTRO -->
     <section class="section">
         <picture>
-            <source srcset="/images/chi_siamo/chi_siamo-img-7.webp" type="image/webp">
-            <img id="immagine-1" src="/images/chi_siamo/chi_siamo-img-7.jpg" alt="">
+            <source srcset="../images/chi_siamo/chi_siamo-img-7.webp" type="image/webp">
+            <img id="immagine-1" src="../images/chi_siamo/chi_siamo-img-7.jpg" alt="">
         </picture>        
         <div class="overlay"></div>
         <div class="hero-text">
@@ -60,47 +60,48 @@
         <div class="staff-container">
             <div class="staff-card">
                 <picture>
-                    <source srcset="/images/chi_siamo/chi_siamo-img-1.webp" type="image/webp">
-                    <img src="/images/chi_siamo/chi_siamo-img-1.jpg" alt="" loading="lazy">
+                    <source srcset="../images/chi_siamo/chi_siamo-img-1.webp" type="image/webp">
+                    <img src="../images/chi_siamo/chi_siamo-img-1.jpg" alt="" loading="lazy">
                 </picture>                
                 <h2>Marco Rossi</h2>
                 <p>Personal Trainer & Preparatore Atletico</p>
             </div>
             <div class="staff-card">
                 <picture>
-                    <source srcset="/images/chi_siamo/chi_siamo-img-2.webp" type="image/webp">
-                    <img src="/images/chi_siamo/chi_siamo-img-2.jpg" alt="" loading="lazy">
+                    <source srcset="../images/chi_siamo/chi_siamo-img-2.webp" type="image/webp">
+                    <img src="../images/chi_siamo/chi_siamo-img-2.jpg" alt="" loading="lazy">
                 </picture>                
                 <h2>Giulia Bianchi</h2>
                 <p>Istruttrice Yoga & Pilates</p>
             </div>
             <div class="staff-card">
                 <picture>
-                    <source srcset="/images/chi_siamo/chi_siamo-img-3.webp" type="image/webp">
-                    <img src="/images/chi_siamo/chi_siamo-img-3.jpg" alt="" loading="lazy">
+                    <source srcset="../images/chi_siamo/chi_siamo-img-3.webp" type="image/webp">
+                    <img src="../images/chi_siamo/chi_siamo-img-3.jpg" alt="" loading="lazy">
                 </picture>                
                 <h2>Davide Conti</h2>
                 <p>Istruttore CrossFit & Zumba</p>
             </div>
             <div class="staff-card">
                 <picture>
-                    <source srcset="/images/chi_siamo/chi_siamo-img-4.webp" type="image/webp">
-                    <img src="/images/chi_siamo/chi_siamo-img-4.jpg" alt="" loading="lazy">
+                    <source srcset="../images/chi_siamo/chi_siamo-img-4.webp" type="image/webp">
+                    <img src="../images/chi_siamo/chi_siamo-img-4.jpg" alt="" loading="lazy">
                 </picture>                
                 <h2>Sara Verdi</h2>
                 <p>Nutrizionista Sportiva</p>
             </div>
             <div class="staff-card">
                 <picture>
-                    <source srcset="/images/chi_siamo/chi_siamo-img-5.webp" type="image/webp">
-                    <img src="/images/chi_siamo/chi_siamo-img-5.jpg" alt="" loading="lazy">
-                </picture>                <h2>Luca Moretti</h2>
+                    <source srcset="../images/chi_siamo/chi_siamo-img-5.webp" type="image/webp">
+                    <img src="../images/chi_siamo/chi_siamo-img-5.jpg" alt="" loading="lazy">
+                </picture>                
+                <h2>Luca Moretti</h2>
                 <p>Personal Trainer</p>
             </div>
             <div class="staff-card">
                 <picture>
-                    <source srcset="/images/chi_siamo/chi_siamo-img-6.webp" type="image/webp">
-                    <img src="/images/chi_siamo/chi_siamo-img-6.jpg" alt="" loading="lazy">
+                    <source srcset="../images/chi_siamo/chi_siamo-img-6.webp" type="image/webp">
+                    <img src="../images/chi_siamo/chi_siamo-img-6.jpg" alt="" loading="lazy">
                 </picture>                
                 <h2>Elena Neri</h2>
                 <p>Reception & Accoglienza</p>
@@ -113,19 +114,19 @@
         <div class="footer-container">
             <div class="footer-col" id="footer-div-img">
                 <picture>
-                    <source srcset="/images/logo_white.webp" type="image/webp">
-                    <img src="/images/logo_white.png" alt="FitLife logo" class="footer-logo" loading="lazy">
+                    <source srcset="../images/logo_white.webp" type="image/webp">
+                    <img src="../images/logo_white.png" alt="FitLife logo" class="footer-logo" loading="lazy">
                 </picture>
                 <p class="footer-desc">Il tuo benessere, la nostra missione.<br>Vivi FitLife ogni giorno!</p>
             </div>
             <div class="footer-col">
                 <h4 class="footer-title">Link utili</h4>
                 <ul class="footer-links">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/corsi.html">Corsi</a></li>
-                    <li><a href="/pages/chi_siamo.html">Chi Siamo?</a></li>
-                    <li><a href="/pages/contatti.html">Contatti</a></li>
-                    <li><a href="/pages/login.html">Area Riservata</a></li>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="corsi.php">Corsi</a></li>
+                    <li><a href="chi_siamo.php">Chi Siamo?</a></li>
+                    <li><a href="contatti.php">Contatti</a></li>
+                    <li><a href="login.php">Area Riservata</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -147,6 +148,6 @@
         </div>
     </footer>
 
-    <script src="/script/index.js"></script>
+    <script src="../script/index.js"></script>
 </body>
 </html>
